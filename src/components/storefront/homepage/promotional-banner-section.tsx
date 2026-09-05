@@ -14,7 +14,7 @@ export function PromotionalBannerSection() {
             <p className="text-lg text-muted-foreground mb-6">
               Structural copy for the promotional banner. This area will be used for campaigns, special discounts, or highlighted product pushes, driven by database settings.
             </p>
-            <Link href="/shop" className={buttonVariants({ size: "lg" })}>Secondary CTA</Link>
+            <Link href="/#" className={buttonVariants({ size: "lg" })}>Shop Deals</Link>
           </div>
 
           <div className="z-10 w-full md:w-1/2 flex justify-center md:justify-end">

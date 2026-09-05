@@ -28,11 +28,11 @@ export function Header() {
               </SheetHeader>
               <nav className="flex flex-col gap-4 mt-8">
                 <Link href="/" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-medium hover:text-primary transition-colors">Home</Link>
-                <Link href="/shop" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-medium hover:text-primary transition-colors">Shop All</Link>
-                <Link href="/category/new-arrivals" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-medium hover:text-primary transition-colors">New Arrivals</Link>
-                <Link href="/category/skincare" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-medium hover:text-primary transition-colors">Skincare</Link>
-                <Link href="/category/wellness" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-medium hover:text-primary transition-colors">Wellness</Link>
-                <Link href="/category/haircare" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-medium hover:text-primary transition-colors">Haircare</Link>
+                <span className="text-lg font-medium text-muted-foreground/50 cursor-default">Shop All (Coming Soon)</span>
+                <span className="text-lg font-medium text-muted-foreground/50 cursor-default">New Arrivals (Coming Soon)</span>
+                <span className="text-lg font-medium text-muted-foreground/50 cursor-default">Skincare (Coming Soon)</span>
+                <span className="text-lg font-medium text-muted-foreground/50 cursor-default">Wellness (Coming Soon)</span>
+                <span className="text-lg font-medium text-muted-foreground/50 cursor-default">Haircare (Coming Soon)</span>
               </nav>
             </SheetContent>
           </Sheet>
@@ -42,10 +42,10 @@ export function Header() {
         <Link href="/" className="flex items-center gap-2">
           <Image 
             src="/assets/logo.jpg" 
-            alt="Nelo Blossom" 
-            width={160} 
-            height={48} 
-            className="object-contain max-h-10 w-auto"
+            alt="Nelo Blossom Empire" 
+            width={200} 
+            height={200} 
+            className="object-contain h-10 sm:h-11 md:h-12 lg:h-14 w-auto"
             priority
           />
         </Link>

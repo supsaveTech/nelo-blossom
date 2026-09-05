@@ -1,7 +1,5 @@
 'use client';
 
-import Link from 'next/link';
-
 // NOTE: This interface is a mock for Phase 2A and prepares the component 
 // to receive dynamic data from Supabase in Phase 2C.
 export interface Category {
@@ -29,20 +27,18 @@ export function CategoryNavigation({ categories = [] }: CategoryNavigationProps)
   return (
     <nav className="hidden md:flex items-center gap-6">
       {displayCategories.map((category) => (
-        <Link 
+        <span 
           key={category.id} 
-          href={`/category/${category.slug}`}
-          className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+          className="text-sm font-medium text-muted-foreground/50 cursor-default"
         >
           {category.name}
-        </Link>
+        </span>
       ))}
-      <Link 
-        href="/shop"
-        className="text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+      <span 
+        className="text-sm font-medium text-primary/50 cursor-default"
       >
         Shop All
-      </Link>
+      </span>
     </nav>
   );
 }

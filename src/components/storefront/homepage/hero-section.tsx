@@ -21,8 +21,8 @@ export function HeroSection() {
           Discover our curated collection of premium products designed to elevate your everyday routine.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 pt-4 w-full sm:w-auto">
-          <Link href="/shop" className={buttonVariants({ size: "lg", className: "w-full sm:w-auto" })}>Shop Now</Link>
-          <Link href="/category" className={buttonVariants({ size: "lg", variant: "outline", className: "w-full sm:w-auto bg-background/50 backdrop-blur-sm" })}>Explore Collections</Link>
+          <Link href="/#" className={buttonVariants({ size: "lg", className: "w-full sm:w-auto" })}>Shop Now</Link>
+          <Link href="/#" className={buttonVariants({ size: "lg", variant: "outline", className: "w-full sm:w-auto bg-background/50 backdrop-blur-sm" })}>Explore Collections</Link>
         </div>
       </div>
     </section>
