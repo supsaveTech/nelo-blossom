@@ -43,9 +43,9 @@ export function Footer() {
             <h4 className="text-sm font-semibold tracking-wider uppercase text-foreground">Quick Links</h4>
             <ul className="space-y-2">
               <li><Link href="/" className="text-sm text-muted-foreground hover:text-primary transition-colors">Home</Link></li>
-              <li><span className="text-sm text-muted-foreground/50 cursor-default">Shop All (Coming Soon)</span></li>
-              <li><span className="text-sm text-muted-foreground/50 cursor-default">Our Story (Coming Soon)</span></li>
-              <li><span className="text-sm text-muted-foreground/50 cursor-default">Contact Us (Coming Soon)</span></li>
+              <li><Link href="/shop" className="text-sm text-muted-foreground hover:text-primary transition-colors">Shop All</Link></li>
+              <li><Link href="/about" className="text-sm text-muted-foreground hover:text-primary transition-colors">Our Story</Link></li>
+              <li><Link href="/contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">Contact Us</Link></li>
             </ul>
           </div>
 
@@ -53,11 +53,12 @@ export function Footer() {
           <div className="space-y-4">
             <h4 className="text-sm font-semibold tracking-wider uppercase text-foreground">Support</h4>
             <ul className="space-y-2">
-              <li><span className="text-sm text-muted-foreground/50 cursor-default">FAQ (Coming Soon)</span></li>
-              <li><span className="text-sm text-muted-foreground/50 cursor-default">Shipping &amp; Returns (Coming Soon)</span></li>
-              <li><span className="text-sm text-muted-foreground/50 cursor-default">Track Order (Coming Soon)</span></li>
-              <li><span className="text-sm text-muted-foreground/50 cursor-default">Privacy Policy (Coming Soon)</span></li>
-              <li><span className="text-sm text-muted-foreground/50 cursor-default">Terms of Service (Coming Soon)</span></li>
+              <li><Link href="/faq" className="text-sm text-muted-foreground hover:text-primary transition-colors">FAQ</Link></li>
+              <li><Link href="/shipping" className="text-sm text-muted-foreground hover:text-primary transition-colors">Shipping</Link></li>
+              <li><Link href="/returns" className="text-sm text-muted-foreground hover:text-primary transition-colors">Returns</Link></li>
+              <li><Link href="/track-order" className="text-sm text-muted-foreground hover:text-primary transition-colors">Track Order</Link></li>
+              <li><Link href="/privacy" className="text-sm text-muted-foreground hover:text-primary transition-colors">Privacy Policy</Link></li>
+              <li><Link href="/terms" className="text-sm text-muted-foreground hover:text-primary transition-colors">Terms of Service</Link></li>
             </ul>
           </div>
 
