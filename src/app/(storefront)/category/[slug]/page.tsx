@@ -1,6 +1,7 @@
 import { ProductCard } from "@/components/storefront/product-card";
 import { getProductsByCategory, getCategoryBySlug } from "@/lib/supabase/queries";
 import { notFound } from "next/navigation";
+import Link from "next/link";
 import type { Metadata } from "next";
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
@@ -35,12 +36,12 @@ export default async function CategoryPage({ params }: { params: { slug: string 
           <div className="space-y-4">
             <h3 className="font-semibold text-lg">Categories</h3>
             <ul className="space-y-2 text-muted-foreground">
-              <li><a href="/shop" className="hover:text-primary transition-colors">Shop All</a></li>
-              <li><a href="/category/supplement-gummies" className={params.slug === 'supplement-gummies' ? "text-primary font-medium" : "hover:text-primary transition-colors"}>Supplement Gummies</a></li>
-              <li><a href="/category/herbal-wellness" className={params.slug === 'herbal-wellness' ? "text-primary font-medium" : "hover:text-primary transition-colors"}>Herbal Wellness</a></li>
-              <li><a href="/category/feminine-hygiene" className={params.slug === 'feminine-hygiene' ? "text-primary font-medium" : "hover:text-primary transition-colors"}>Feminine Care</a></li>
-              <li><a href="/category/beauty-and-self-care" className={params.slug === 'beauty-and-self-care' ? "text-primary font-medium" : "hover:text-primary transition-colors"}>Beauty & Self-Care</a></li>
-              <li><a href="/category/weight-management" className={params.slug === 'weight-management' ? "text-primary font-medium" : "hover:text-primary transition-colors"}>Weight Management</a></li>
+              <li><Link href="/shop" className="hover:text-primary transition-colors">Shop All</Link></li>
+              <li><Link href="/category/supplement-gummies" className={params.slug === 'supplement-gummies' ? "text-primary font-medium" : "hover:text-primary transition-colors"}>Supplement Gummies</Link></li>
+              <li><Link href="/category/herbal-wellness" className={params.slug === 'herbal-wellness' ? "text-primary font-medium" : "hover:text-primary transition-colors"}>Herbal Wellness</Link></li>
+              <li><Link href="/category/feminine-hygiene" className={params.slug === 'feminine-hygiene' ? "text-primary font-medium" : "hover:text-primary transition-colors"}>Feminine Care</Link></li>
+              <li><Link href="/category/beauty-and-self-care" className={params.slug === 'beauty-and-self-care' ? "text-primary font-medium" : "hover:text-primary transition-colors"}>Beauty & Self-Care</Link></li>
+              <li><Link href="/category/weight-management" className={params.slug === 'weight-management' ? "text-primary font-medium" : "hover:text-primary transition-colors"}>Weight Management</Link></li>
             </ul>
           </div>
         </aside>
@@ -55,7 +56,7 @@ export default async function CategoryPage({ params }: { params: { slug: string 
           ) : (
             <div className="py-24 text-center border rounded-xl bg-muted/10 flex flex-col items-center justify-center">
               <h3 className="text-xl font-semibold mb-2">No products found</h3>
-              <p className="text-muted-foreground">We couldn't find any products in this category.</p>
+              <p className="text-muted-foreground">We couldn&apos;t find any products in this category at this time.</p>
             </div>
           )}
         </div>

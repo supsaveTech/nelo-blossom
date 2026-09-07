@@ -1,4 +1,5 @@
 import { createClient } from './server';
+import { MOCK_PRODUCTS, MOCK_CATEGORIES } from '../mock-data';
 
 export interface Product {
   id: string;
@@ -33,6 +34,10 @@ export interface ProductWithCategory extends Product {
  * Strictly respects is_active = true.
  */
 export async function getFeaturedCategories() {
+  if (process.env.USE_MOCK_DATA === 'true') {
+    return MOCK_CATEGORIES.filter(c => c.is_active).sort((a, b) => a.display_order - b.display_order).slice(0, 4);
+  }
+
   const supabase = await createClient();
   
   const { data, error } = await supabase
@@ -55,6 +60,10 @@ export async function getFeaturedCategories() {
  * strictly respects is_published = true and is_bestseller = true.
  */
 export async function getBestSellers() {
+  if (process.env.USE_MOCK_DATA === 'true') {
+    return MOCK_PRODUCTS.filter(p => p.is_published && p.is_bestseller).slice(0, 4) as unknown as ProductWithCategory[];
+  }
+
   const supabase = await createClient();
   
   // Notice we fetch related categories and images to display in the ProductCard
@@ -90,6 +99,10 @@ export async function getBestSellers() {
  * strictly respects is_published = true.
  */
 export async function getNewArrivals() {
+  if (process.env.USE_MOCK_DATA === 'true') {
+    return MOCK_PRODUCTS.filter(p => p.is_published).slice(0, 4) as unknown as ProductWithCategory[];
+  }
+
   const supabase = await createClient();
   
   const { data, error } = await supabase
@@ -119,6 +132,10 @@ export async function getNewArrivals() {
 
 
 export async function getAllProducts() {
+  if (process.env.USE_MOCK_DATA === 'true') {
+    return MOCK_PRODUCTS.filter(p => p.is_published) as unknown as ProductWithCategory[];
+  }
+
   const supabase = await createClient();
   const { data, error } = await supabase
     .from('products')
@@ -146,6 +163,10 @@ export async function getAllProducts() {
 
 
 export async function getProductsByCategory(slug: string) {
+  if (process.env.USE_MOCK_DATA === 'true') {
+    return MOCK_PRODUCTS.filter(p => p.is_published && p.categories.some(c => c.slug === slug)) as unknown as ProductWithCategory[];
+  }
+
   const supabase = await createClient();
   const { data, error } = await supabase
     .from('products')
@@ -173,6 +194,10 @@ export async function getProductsByCategory(slug: string) {
 }
 
 export async function getCategoryBySlug(slug: string) {
+  if (process.env.USE_MOCK_DATA === 'true') {
+    return MOCK_CATEGORIES.find(c => c.slug === slug) as unknown as Category || null;
+  }
+
   const supabase = await createClient();
   const { data, error } = await supabase
     .from('categories')
@@ -190,6 +215,10 @@ export async function getCategoryBySlug(slug: string) {
 
 
 export async function getProductBySlug(slug: string) {
+  if (process.env.USE_MOCK_DATA === 'true') {
+    return MOCK_PRODUCTS.find(p => p.slug === slug) as unknown as ProductWithCategory || null;
+  }
+
   const supabase = await createClient();
   const { data, error } = await supabase
     .from('products')
@@ -219,6 +248,10 @@ export async function getProductBySlug(slug: string) {
 
 
 export async function searchProducts(query: string) {
+  if (process.env.USE_MOCK_DATA === 'true') {
+    return MOCK_PRODUCTS.filter(p => p.is_published && p.name.toLowerCase().includes(query.toLowerCase())) as unknown as ProductWithCategory[];
+  }
+
   const supabase = await createClient();
   const { data, error } = await supabase
     .from('products')

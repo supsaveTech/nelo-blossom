@@ -55,7 +55,7 @@ export function ProductCard({ product }: ProductCardProps) {
                   height={60}
                   className="opacity-20 grayscale"
                 />
-                <span className="text-xs tracking-wider uppercase">Image Coming Soon</span>
+                <span className="text-xs tracking-wider uppercase">No Image Available</span>
               </div>
             )}
             

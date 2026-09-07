@@ -70,11 +70,11 @@ export default async function ProductPage({ params }: { params: { slug: string }
                 <Image 
                   src="/assets/logo.jpg"
                   alt="Nelo Blossom Empire"
-                  width={120}
-                  height={120}
+                  width={100}
+                  height={100}
                   className="opacity-20 grayscale"
                 />
-                <span className="text-sm font-medium tracking-wider uppercase">Image Coming Soon</span>
+                <span className="text-sm font-medium tracking-wider uppercase">No Image Available</span>
               </div>
             )}
             

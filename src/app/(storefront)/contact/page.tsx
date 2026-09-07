@@ -11,8 +11,8 @@ export default function ContactPage() {
       <h1 className="text-4xl font-bold mb-8 tracking-tight">Contact Us</h1>
       <div className="grid md:grid-cols-2 gap-12">
         <div>
-          <h2 className="text-2xl font-semibold mb-4">We'd love to hear from you</h2>
-          <p className="text-muted-foreground mb-6">Whether you have a question about our products, need assistance with an order, or just want to share your wellness journey, our team is here to help.</p>
+          <h2 className="text-2xl font-semibold mb-4">We&apos;d love to hear from you</h2>
+          <p className="text-muted-foreground mb-6">Whether you have a question about our products, need assistance with an order, or just want to share your wellness journey, our team is here to help. If you don&apos;t hear from us right away, please be patient as we respond to all inquiries.</p>
           <div className="space-y-4 text-muted-foreground">
             <p><strong>Email:</strong> support@neloblossom.com</p>
             <p><strong>WhatsApp:</strong> +234 (0) 000 000 0000</p>

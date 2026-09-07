@@ -10,8 +10,8 @@ export async function NewArrivalsSection() {
       <section className="py-16 md:py-24 bg-muted/30">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">New Arrivals</h2>
-          <div className="py-12 border border-dashed rounded-xl bg-background flex flex-col items-center justify-center text-muted-foreground">
-            <p>Products Coming Soon</p>
+          <div className="py-12 border border-dashed rounded-xl bg-muted/10 flex flex-col items-center justify-center text-muted-foreground">
+            <p>No new arrivals found at this time.</p>
           </div>
         </div>
       </section>

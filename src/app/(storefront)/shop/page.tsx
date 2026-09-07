@@ -1,5 +1,6 @@
 import { ProductCard } from "@/components/storefront/product-card";
 import { getAllProducts } from "@/lib/supabase/queries";
+import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -25,11 +26,11 @@ export default async function ShopPage() {
           <div className="space-y-4">
             <h3 className="font-semibold text-lg">Categories</h3>
             <ul className="space-y-2 text-muted-foreground">
-              <li><a href="/category/supplement-gummies" className="hover:text-primary transition-colors">Supplement Gummies</a></li>
-              <li><a href="/category/herbal-wellness" className="hover:text-primary transition-colors">Herbal Wellness</a></li>
-              <li><a href="/category/feminine-hygiene" className="hover:text-primary transition-colors">Feminine Care</a></li>
-              <li><a href="/category/beauty-and-self-care" className="hover:text-primary transition-colors">Beauty & Self-Care</a></li>
-              <li><a href="/category/weight-management" className="hover:text-primary transition-colors">Weight Management</a></li>
+              <li><Link href="/category/supplement-gummies" className="hover:text-primary transition-colors">Supplement Gummies</Link></li>
+              <li><Link href="/category/herbal-wellness" className="hover:text-primary transition-colors">Herbal Wellness</Link></li>
+              <li><Link href="/category/feminine-hygiene" className="hover:text-primary transition-colors">Feminine Care</Link></li>
+              <li><Link href="/category/beauty-and-self-care" className="hover:text-primary transition-colors">Beauty & Self-Care</Link></li>
+              <li><Link href="/category/weight-management" className="hover:text-primary transition-colors">Weight Management</Link></li>
             </ul>
           </div>
           
@@ -54,7 +55,7 @@ export default async function ShopPage() {
           ) : (
             <div className="py-24 text-center border rounded-xl bg-muted/10 flex flex-col items-center justify-center">
               <h3 className="text-xl font-semibold mb-2">No products found</h3>
-              <p className="text-muted-foreground">We couldn't find any products at this time.</p>
+              <p className="text-muted-foreground mb-6">We couldn&apos;t find any products in the store right now.</p>
             </div>
           )}
         </div>
